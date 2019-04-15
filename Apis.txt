@@ -1,0 +1,43 @@
+post :http://localhost:3000/members
+body :
+{
+	"firstName": "firstName",
+    "username": "username2",
+    "lastName": "lastName",
+    "password": "password2",
+    "memberType": "student",
+    "emailID" : "emailID",
+    "mobileNo": "1234569",
+    "collegeName": "collegeName",
+    "currentQualification": "currentQualification",
+    "supportingDocuments":[ "Proof1", "Proof2", "Proff3" ],
+     "resume": "resume.pdf",
+    "preferredLocation" : "Mumbai" ,
+   "providerType" : "organization",
+    "providerName" : "abc",
+    "skillsTags": [ "skill1", "skill2", "skill3" ],
+    "supportingDocumentForSkills":[ "Proof1", "Proof2", "Proff3" ]
+	
+}
+---------------------------------------------------------
+
+
+post : http://localhost:3000/login
+body :
+{
+	"username":"username1",
+	"password":"password1"
+}
+
+------------------------
+post :http://localhost:3000/loginTestToken
+Header :x-access-token - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYTIxNWMzMjcyZWZjNDM3YzZhOTk1NiIsImlhdCI6MTU1NDIwNDMzNywiZXhwIjoxNTU0MjkwNzM3fQ.5AFc7F2eU6BeTsuPJJOYa7E1E00z2IQXaK5wPn8_rrE
+Body :
+{
+	"username":"username1",
+	"password":"password1"
+}
+
+------------------------------------------
+get :http://localhost:3000/students?skill=skill1,skill2&pageNo=1&size=10
+-----------------------------------------------
